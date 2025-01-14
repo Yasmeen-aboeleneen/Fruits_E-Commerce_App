@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:fruits_app/Core/Helper/on_generate_route_function.dart';
+import 'package:fruits_app/Views/Splash/Presentation/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -7,16 +9,13 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-   @override
+  @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Fruits Hub',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-     );
+      onGenerateRoute: onGenerateRoute,
+      initialRoute: SplashScreen.routeName,
+    );
   }
 }
-
- 
