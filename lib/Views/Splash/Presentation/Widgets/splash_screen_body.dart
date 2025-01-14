@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fruits_app/Core/Utils/app_images.dart';
@@ -38,8 +40,8 @@ class _SplashScreenBodyState extends State<SplashScreenBody> {
     );
   }
 
-  void excuteNavigation() {
-    Future.delayed(const Duration(seconds: 2));
+  void excuteNavigation() async {
+    await Future.delayed(const Duration(seconds: 3));
     Navigator.pushReplacementNamed(context, OnboardingScreen.onBoardingRoute);
   }
 }
