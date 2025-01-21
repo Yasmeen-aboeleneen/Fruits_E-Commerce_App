@@ -11,10 +11,35 @@ class OnboardingPageView extends StatelessWidget {
       children: const [
         PageViewItem(
             backgroundImage: Assets.imagesPageViewItem1BackgroundImage,
-            subTitle: '',
-            title: Text(
-                'اكتشف تجربة تسوق فريدة معFruits Hub ، استكشف مجموعتنا الواسعة من الفواكه الطازجة و احصل علي افضل العروض.'),
-            image: Assets.imagesPageViewItem1Image)
+            subTitle:
+                'اكتشف تجربة تسوق فريدة معFruits Hub ، استكشف مجموعتنا الواسعة من الفواكه الطازجة و احصل علي افضل العروض.',
+            title: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'مرحبا بك في',
+                ),
+                Text('HUB'),
+                Text(
+                  'Fruit',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+                ),
+              ],
+            ),
+            image: Assets.imagesPageViewItem1Image),
+        PageViewItem(
+            backgroundImage: Assets.imagesPageViewItem2BackgroundImage,
+            subTitle:
+                'نقدم لك افضل الفواكه المختارة بعناية، اطلع علي التفاصيل و الصور\n و التقييمات لتتأكد من اختيار الفاكهة المثالية',
+            title: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "ابحث و تسوق",
+                ),
+              ],
+            ),
+            image: Assets.imagesPageViewItem2Image),
       ],
     );
   }

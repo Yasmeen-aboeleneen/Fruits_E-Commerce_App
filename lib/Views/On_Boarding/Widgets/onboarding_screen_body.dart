@@ -7,9 +7,7 @@ class OnboardingScreenBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Column(
-      children: [
-        Expanded(child: OnboardingPageView())
-      ],
+      children: [Expanded(child: SafeArea(child: OnboardingPageView()))],
     );
   }
 }
