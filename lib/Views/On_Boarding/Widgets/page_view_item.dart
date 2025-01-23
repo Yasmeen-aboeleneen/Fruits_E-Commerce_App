@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:fruits_app/Core/Constants/colors.dart';
 
 class PageViewItem extends StatelessWidget {
   const PageViewItem({
@@ -8,14 +9,16 @@ class PageViewItem extends StatelessWidget {
     required this.subTitle,
     required this.title,
     required this.image,
+    required this.isVisible,
   });
   final String image, backgroundImage;
   final String subTitle;
   final Widget title;
+  final bool isVisible;
   @override
   Widget build(BuildContext context) {
     var h = MediaQuery.of(context).size.height;
-    // var w = MediaQuery.of(context).size.width;
+    var w = MediaQuery.of(context).size.width;
     return Column(
       children: [
         SizedBox(
@@ -35,11 +38,14 @@ class PageViewItem extends StatelessWidget {
                   child: SvgPicture.asset(
                     image,
                   )),
-              const Padding(
-                padding: EdgeInsets.all(16),
-                child: Text(
-                  'تخط',
-                  style: TextStyle(fontWeight: FontWeight.bold),
+              Visibility(
+                visible: isVisible,
+                child: const Padding(
+                  padding: EdgeInsets.all(16),
+                  child: Text(
+                    'تخط',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
                 ),
               ),
             ],
@@ -56,6 +62,8 @@ class PageViewItem extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Text(
             subTitle,
+            style: TextStyle(
+                color: kBlack, fontSize: w * .04, fontWeight: FontWeight.bold),
             textAlign: TextAlign.center,
           ),
         ),
