@@ -1,6 +1,7 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:fruits_app/Core/Constants/colors.dart';
+import 'package:fruits_app/Core/Widgets/custom_buttons.dart';
 import 'package:fruits_app/Views/On_Boarding/Widgets/onboarding_page_view.dart';
 
 class OnboardingScreenBody extends StatelessWidget {
@@ -15,6 +16,19 @@ class OnboardingScreenBody extends StatelessWidget {
           dotsCount: 2,
           decorator:
               const DotsDecorator(activeColor: kPrimary, color: kPrimary2),
+        ),
+        const SizedBox(
+          height: 29,
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 25),
+          child: CustomButton(
+            onpressed: () {},
+            text: 'ابدأ الآن',
+          ),
+        ),
+        const SizedBox(
+          height: 43,
         )
       ],
     );
