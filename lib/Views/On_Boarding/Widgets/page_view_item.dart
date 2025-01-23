@@ -44,7 +44,8 @@ class PageViewItem extends StatelessWidget {
                   padding: EdgeInsets.all(16),
                   child: Text(
                     'تخط',
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                    style:
+                        TextStyle(color: kDGrey, fontWeight: FontWeight.bold),
                   ),
                 ),
               ),
@@ -63,7 +64,7 @@ class PageViewItem extends StatelessWidget {
           child: Text(
             subTitle,
             style: TextStyle(
-                color: kBlack, fontSize: w * .04, fontWeight: FontWeight.bold),
+                color: kBlack, fontSize: w * .04, fontWeight: FontWeight.w600),
             textAlign: TextAlign.center,
           ),
         ),

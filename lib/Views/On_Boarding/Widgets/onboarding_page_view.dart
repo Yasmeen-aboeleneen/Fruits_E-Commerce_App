@@ -18,10 +18,7 @@ class OnboardingPageView extends StatelessWidget {
       controller: pageController,
       children: [
         PageViewItem(
-            isVisible: (pageController.hasClients
-                    ? pageController.page!.round()
-                    : 0) ==
-                0,
+            isVisible: true,
             backgroundImage: Assets.imagesPageViewItem1BackgroundImage,
             subTitle:
                 'اكتشف تجربة تسوق فريدة معFruits Hub ، استكشف مجموعتنا الواسعة من الفواكه الطازجة و احصل علي افضل العروض.',
@@ -51,10 +48,7 @@ class OnboardingPageView extends StatelessWidget {
             ),
             image: Assets.imagesPageViewItem1Image),
         PageViewItem(
-            isVisible: (pageController.hasClients
-                    ? pageController.page!.round()
-                    : 0) !=
-                0,
+            isVisible: false,
             backgroundImage: Assets.imagesPageViewItem2BackgroundImage,
             subTitle:
                 'نقدم لك افضل الفواكه المختارة بعناية، اطلع علي التفاصيل و الصور و التقييمات لتتأكد من اختيار الفاكهة المثالية',
