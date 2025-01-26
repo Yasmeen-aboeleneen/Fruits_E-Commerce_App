@@ -1,6 +1,8 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:fruits_app/Core/Constants/colors.dart';
+import 'package:fruits_app/Core/Constants/constants.dart';
+import 'package:fruits_app/Core/Services/shared_pref_singleton.dart';
 import 'package:fruits_app/Core/Widgets/custom_buttons.dart';
 import 'package:fruits_app/Views/Auth/Presentation/login_screen.dart';
 import 'package:fruits_app/Views/On_Boarding/Widgets/onboarding_page_view.dart';
@@ -62,6 +64,8 @@ class _OnboardingScreenBodyState extends State<OnboardingScreenBody> {
             padding: const EdgeInsets.symmetric(horizontal: 25),
             child: CustomButton(
               onpressed: () {
+                SharedPreferencesSingleton.setBool(
+                    kIsOnBoardingScreenSeen, true);
                 Navigator.of(context)
                     .pushReplacementNamed(LoginScreen.loginRoute);
               },

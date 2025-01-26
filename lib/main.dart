@@ -5,8 +5,9 @@ import 'package:fruits_app/Views/Splash/Presentation/splash_screen.dart';
 import 'package:fruits_app/generated/l10n.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-void main()async {
- await SharedPreferencesSingleton.init();
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await SharedPreferencesSingleton.init();
   runApp(const MyApp());
 }
 
