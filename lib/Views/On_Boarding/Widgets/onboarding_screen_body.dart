@@ -2,6 +2,7 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:fruits_app/Core/Constants/colors.dart';
 import 'package:fruits_app/Core/Widgets/custom_buttons.dart';
+import 'package:fruits_app/Views/Auth/Presentation/login_screen.dart';
 import 'package:fruits_app/Views/On_Boarding/Widgets/onboarding_page_view.dart';
 
 class OnboardingScreenBody extends StatefulWidget {
@@ -60,7 +61,10 @@ class _OnboardingScreenBodyState extends State<OnboardingScreenBody> {
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25),
             child: CustomButton(
-              onpressed: () {},
+              onpressed: () {
+                Navigator.of(context)
+                    .pushReplacementNamed(LoginScreen.loginRoute);
+              },
               text: 'ابدأ الآن',
             ),
           ),
