@@ -1,6 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:fruits_app/Core/Constants/colors.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton({
@@ -25,9 +26,9 @@ class CustomButton extends StatelessWidget {
           onPressed: onpressed,
           child: Text(
             text,
-            style: TextStyle(
+            style: GoogleFonts.cairo(
                 color: kveryWhite,
-                fontSize: w * .056,
+                fontSize: w * .052,
                 fontWeight: FontWeight.bold),
           )),
     );

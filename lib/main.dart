@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruits_app/Core/Constants/colors.dart';
 import 'package:fruits_app/Core/Helper/on_generate_route_function.dart';
 import 'package:fruits_app/Core/Services/shared_pref_singleton.dart';
 import 'package:fruits_app/Views/Splash/Presentation/splash_screen.dart';
@@ -17,6 +18,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+          scaffoldBackgroundColor: kveryWhite,
+          colorScheme: ColorScheme.fromSeed(seedColor: kPrimary)),
       debugShowCheckedModeBanner: false,
       localizationsDelegates: const [
         S.delegate,
