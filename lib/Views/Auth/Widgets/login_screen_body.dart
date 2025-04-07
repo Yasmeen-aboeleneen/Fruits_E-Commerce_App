@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_app/Core/Constants/colors.dart';
+import 'package:fruits_app/Core/Utils/app_images.dart';
 import 'package:fruits_app/Core/Widgets/custom_buttons.dart';
 import 'package:fruits_app/Core/Widgets/custom_text_form_field.dart';
 import 'package:fruits_app/Views/Auth/Widgets/or_divider.dart';
+import 'package:fruits_app/Views/Auth/Widgets/social_button.dart';
 
 import 'package:google_fonts/google_fonts.dart';
 
@@ -16,9 +18,9 @@ class LoginScreenBody extends StatelessWidget {
     var w = MediaQuery.of(context).size.width;
     var h = MediaQuery.of(context).size.height;
 
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 10),
-      child: SingleChildScrollView(
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 10),
         child: Column(
           children: [
             SizedBox(
@@ -66,7 +68,31 @@ class LoginScreenBody extends StatelessWidget {
             SizedBox(
               height: h * .033,
             ),
-            const OrDivider()
+            const OrDivider(),
+            SizedBox(
+              height: h * .016,
+            ),
+            SocialButton(
+              onpressed: () {},
+              title: 'تسجيل بواسطة جوجل',
+              image: Assets.imagesGoogleIcon,
+            ),
+            SizedBox(
+              height: h * .033,
+            ),
+            SocialButton(
+              onpressed: () {},
+              title: 'تسجيل بواسطة ابل',
+              image: Assets.imagesApplIcon,
+            ),
+            SizedBox(
+              height: h * .033,
+            ),
+            SocialButton(
+              onpressed: () {},
+              title: 'تسجيل بواسطة فيسبوك',
+              image: Assets.imagesFacebookIcon,
+            ),
           ],
         ),
       ),
