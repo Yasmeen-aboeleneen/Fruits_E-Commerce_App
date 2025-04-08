@@ -1,5 +1,7 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:fruits_app/Core/Constants/colors.dart';
+import 'package:fruits_app/Views/Auth/Presentation/signup_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class DoNotHaveAnAccountWidget extends StatelessWidget {
@@ -22,6 +24,10 @@ class DoNotHaveAnAccountWidget extends StatelessWidget {
           style: GoogleFonts.cairo(
               color: kMGrey, fontWeight: FontWeight.w600, fontSize: w * .045)),
       TextSpan(
+          recognizer: TapGestureRecognizer()
+            ..onTap = () {
+              Navigator.pushNamed(context, SignupScreen.signUPRoute);
+            },
           text: 'قم بإنشاء حساب',
           style: GoogleFonts.cairo(
               color: kPrimary, fontWeight: FontWeight.w700, fontSize: w * .048))
